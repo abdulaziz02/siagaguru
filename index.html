@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260916-03-7343f9b","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/c21197326e9a1154.telemetry_sdk.js" integrity="sha512-Aqwl+NmLtKBcMQM4HY+W9lmBHa+zP5MqSEuYfCjkzt4xeOSv2xNz81cCp7JyXBVrY+zojg5o94FHY/R31v2d3Q=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIAGA GURU</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/efe904fe8a212716.data_sdk.js" integrity="sha512-oiO0pmn5llS1uDeB2l690YywxqOe/a0U1kzY6RGaLZXtyh9YjTk1CUoK/bJUugc1QbUaJMJ3IE1MtpNY5NBZCw=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#10233f; --blue:#1769e0; --sky:#eaf4ff; --cyan:#18b9d9; --coral:#fb6b56; --yellow:#ffc53d; --paper:#f5f8fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; width:100%; font-family:"DM Sans",sans-serif; color:var(--ink); background:#f5f8fc; }
+    .app-shell { min-height:calc(100 * min(var(--vh, 1vh), 1vh)); width:100%; }
+    .serif { font-family:"Fraunces",serif; }
+    .morph { animation:morphIn .52s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes morphIn { from { opacity:0; transform:translateY(12px) scale(.985); border-radius:34px; } to { opacity:1; transform:translateY(0) scale(1); border-radius:20px; } }
+    .glow { box-shadow:0 16px 36px rgba(23,105,224,.17); }
+    .nav-item { transition:all .22s ease; }
+    .nav-item:hover,.nav-item.active { background:#eaf4ff; color:#1769e0; transform:translateX(3px); }
+    .view { display:none; }
+    .view.active { display:block; }
+    .calendar-day { width:29px; height:29px; display:grid; place-items:center; border-radius:9px; font-size:11px; cursor:pointer; border:1px solid transparent; transition:.16s; }
+    .calendar-day:hover { background:#dcecff; border-color:#87b9ff; }
+    .calendar-day.today { background:#1769e0; color:white; font-weight:700; }
+    .status-dot { width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:12px; cursor:pointer; transition:.16s; }
+    .status-dot:hover { transform:scale(1.08); }
+    .status-h { background:#d9f7e7;color:#13824a; } .status-s { background:#fff0b9;color:#9a6600; }
+    .status-i { background:#dcecff;color:#1769e0; } .status-a { background:#ffe1dd;color:#c63a2c; }
+    .thin-scroll::-webkit-scrollbar { width:7px; height:7px; } .thin-scroll::-webkit-scrollbar-thumb { background:#c7d8f0;border-radius:9px; }
+    .mini-card { background:white; border:1px solid #e2eaf5; border-radius:18px; }
+    input,select,textarea { outline:none; transition:.18s; } input:focus,select:focus,textarea:focus { border-color:#1769e0!important; box-shadow:0 0 0 3px rgba(23,105,224,.12); }
+    .toast { transform:translateY(120px); transition:.3s ease; } .toast.show { transform:translateY(0); }
+    @media(max-width:768px){ .sidebar{ position:fixed; z-index:30; transform:translateX(-110%); transition:.25s; } .sidebar.open{ transform:translateX(0); } .main-area{ margin-left:0!important; } }
+  </style>
+  <script src="/_sdk/fab616ff82261ec3.resizing_sdk.js" type="text/javascript" integrity="sha512-6HMQCcUK6kDKuW59G/ZuFQDLjI3pOzz+2hgX6MaEV1izmYwYrrxv76nfirS4geYvvwnfUYWKbXBg/ycD2lR6jw=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="app-shell">
+   <section id="welcome-screen" class="w-full min-h-[calc(100*min(var(--vh,1vh),1vh))] bg-white flex items-center justify-center p-6 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(circle at 15% 15%,#dcebff 0,transparent 30%),radial-gradient(circle at 90% 82%,#b9f4ff 0,transparent 29%)"></div>
+    <div class="relative w-full max-w-lg text-center morph">
+     <div class="mx-auto mb-7 grid place-items-center w-20 h-20 rounded-[26px] bg-blue-600 text-white shadow-xl shadow-blue-200">
+      <i data-lucide="graduation-cap" class="w-10 h-10"></i>
+     </div>
+     <p data-template-id="welcome-kicker" class="canva-text text-blue-600 font-bold tracking-[.22em] uppercase text-xs mb-3"></p>
+     <h1 data-template-id="welcome-title" class="canva-text serif text-slate-900 font-bold leading-tight mb-4"></h1>
+     <p data-template-id="welcome-copy" class="canva-text text-slate-500 leading-relaxed mb-8"></p>
+     <form id="welcome-form" class="bg-white text-left rounded-[24px] border border-blue-100 shadow-xl shadow-blue-100/70 p-6" novalidate>
+      <label data-template-id="welcome-name-label" class="canva-text block text-sm font-semibold text-slate-700 mb-2" for="teacher-display-name"></label> <input id="teacher-display-name" required class="w-full border border-slate-200 rounded-xl px-4 py-3.5 text-slate-800" type="text">
+      <p id="welcome-error" class="hidden mt-2 text-sm text-red-600"></p><button data-template-id="welcome-button" class="canva-button mt-5 w-full rounded-xl py-3.5 font-bold shadow-lg shadow-blue-200 hover:-translate-y-0.5 transition" type="submit"></button>
+     </form>
+     <p data-template-id="developer-note" class="canva-text mt-6 text-xs text-slate-400"></p>
+    </div>
+   </section>
+   <div id="app-screen" class="hidden w-full">
+    <aside id="sidebar" class="sidebar fixed left-0 top-0 bottom-0 w-[270px] bg-white border-r border-slate-200 p-5 flex flex-col">
+     <div data-template-id="sidebar-brand" class="canva-panel rounded-2xl p-4 mb-6 text-white" style="background:#10233f">
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 rounded-xl grid place-items-center bg-white/15"><i data-lucide="graduation-cap"></i>
+       </div>
+       <div><strong class="block">SIAGA GURU</strong><span class="text-xs text-blue-100">SMK Yadika 13 Tambun</span>
+       </div>
+      </div>
+     </div>
+     <nav aria-label="Menu aplikasi" class="space-y-1.5 flex-1">
+      <button type="button" class="nav-item active w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="dashboard"><i data-lucide="layout-dashboard" class="w-5"></i>Dashboard</button> <button type="button" class="nav-item w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="students"><i data-lucide="users" class="w-5"></i>Data Siswa</button> <button type="button" class="nav-item w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="attendance"><i data-lucide="calendar-check-2" class="w-5"></i>Absensi Siswa</button> <button type="button" class="nav-item w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="grades"><i data-lucide="notebook-tabs" class="w-5"></i>Nilai Siswa</button> <button type="button" class="nav-item w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="teacher-attendance"><i data-lucide="calendar-days" class="w-5"></i>Absensi Guru</button> <button type="button" class="nav-item w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="journal"><i data-lucide="book-open-check" class="w-5"></i>Jurnal Guru</button> <button type="button" class="nav-item w-full flex gap-3 items-center px-4 py-3 rounded-xl font-semibold text-sm text-slate-600" data-view="profile"><i data-lucide="contact-round" class="w-5"></i>Biodata Guru</button>
+     </nav><button id="logout-button" type="button" class="flex gap-3 items-center px-4 py-3 text-sm font-bold text-red-500 rounded-xl hover:bg-red-50"><i data-lucide="log-out" class="w-5"></i><span data-template-id="logout-label" class="canva-text"></span></button>
+    </aside>
+    <div class="main-area ml-[270px] min-h-[calc(100*min(var(--vh,1vh),1vh))]">
+     <header class="sticky top-0 z-20 bg-[#f5f8fc]/90 backdrop-blur border-b border-slate-200 px-5 lg:px-9 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3"><button id="mobile-menu" type="button" class="md:hidden p-2 rounded-lg bg-white border"><i data-lucide="menu"></i></button>
+       <div>
+        <p class="text-xs font-bold text-blue-600 tracking-widest uppercase">Tahun Pelajaran 2025/2026</p>
+        <h2 id="view-title" class="font-bold text-slate-800">Dashboard</h2>
+       </div>
+      </div>
+      <div class="flex items-center gap-3">
+       <div class="hidden sm:block text-right">
+        <p id="top-teacher-name" class="font-bold text-sm text-slate-700">Guru</p>
+        <p class="text-xs text-slate-400">Administrasi Kelas</p>
+       </div>
+       <div class="w-10 h-10 rounded-full bg-blue-600 text-white grid place-items-center font-bold" id="teacher-initial">
+        G
+       </div>
+      </div>
+     </header>
+     <main class="p-5 lg:p-9 max-w-[1550px]">
+      <section id="dashboard" class="view active morph">
+       <div data-template-id="dashboard-banner" class="canva-banner rounded-[24px] p-6 lg:p-8 text-white overflow-hidden relative" style="background:linear-gradient(130deg,#10233f,#1769e0)">
+        <div class="relative z-10">
+         <p data-template-id="dashboard-greeting" class="canva-text text-blue-100 font-semibold mb-2"></p>
+         <h1 data-template-id="dashboard-title" class="canva-text serif font-bold mb-2"></h1>
+         <p data-template-id="dashboard-description" class="canva-text text-blue-100 max-w-xl"></p>
+        </div><i data-lucide="sparkles" class="absolute right-7 bottom-5 w-28 h-28 text-white/10"></i>
+       </div>
+       <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-5">
+        <article data-template-id="stat-students" class="canva-card rounded-2xl p-5 text-white glow" style="background:#1769e0"><i data-lucide="users" class="w-6 mb-6"></i>
+         <p class="text-blue-100 text-sm">Total Siswa</p><strong id="stat-student-count" class="text-3xl">—</strong>
+        </article>
+        <article data-template-id="stat-attendance" class="canva-card rounded-2xl p-5 text-white glow" style="background:#18b9d9"><i data-lucide="circle-check-big" class="w-6 mb-6"></i>
+         <p class="text-cyan-50 text-sm">Kehadiran Bulan Ini</p><strong id="stat-attendance-rate" class="text-3xl">—</strong>
+        </article>
+        <article data-template-id="stat-journal" class="canva-card rounded-2xl p-5 text-white glow" style="background:#fb6b56"><i data-lucide="book-marked" class="w-6 mb-6"></i>
+         <p class="text-orange-50 text-sm">Jurnal Tersimpan</p><strong id="stat-journal-count" class="text-3xl">—</strong>
+        </article>
+        <article data-template-id="stat-profile" class="canva-card rounded-2xl p-5 text-slate-900 glow" style="background:#ffc53d"><i data-lucide="badge-check" class="w-6 mb-6"></i>
+         <p class="text-slate-700 text-sm">Profil Guru</p><strong id="stat-profile-status" class="text-xl">Belum diisi</strong>
+        </article>
+       </div>
+       <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-5 mt-5">
+        <section class="mini-card p-6">
+         <h2 data-template-id="quick-heading" class="canva-text font-bold text-slate-800 mb-4"></h2>
+         <div class="grid grid-cols-2 gap-3"><button type="button" class="quick-btn text-left p-4 rounded-xl bg-blue-50 hover:bg-blue-100" data-view="students"><i data-lucide="user-plus" class="text-blue-600 w-5 mb-2"></i><span class="block font-bold text-sm">Input siswa</span></button><button type="button" class="quick-btn text-left p-4 rounded-xl bg-cyan-50 hover:bg-cyan-100" data-view="attendance"><i data-lucide="clipboard-check" class="text-cyan-600 w-5 mb-2"></i><span class="block font-bold text-sm">Absen kelas</span></button><button type="button" class="quick-btn text-left p-4 rounded-xl bg-orange-50 hover:bg-orange-100" data-view="grades"><i data-lucide="pen-line" class="text-orange-500 w-5 mb-2"></i><span class="block font-bold text-sm">Input nilai</span></button><button type="button" class="quick-btn text-left p-4 rounded-xl bg-amber-50 hover:bg-amber-100" data-view="journal"><i data-lucide="notebook-pen" class="text-amber-600 w-5 mb-2"></i><span class="block font-bold text-sm">Buat jurnal</span></button>
+         </div>
+        </section>
+        <section class="mini-card p-6">
+         <h2 data-template-id="teacher-summary-heading" class="canva-text font-bold text-slate-800 mb-4"></h2>
+         <div id="teacher-summary" class="text-sm text-slate-500 leading-7">
+          Lengkapi biodata untuk menampilkan ringkasan guru.
+         </div>
+        </section>
+       </div>
+      </section>
+      <section id="students" class="view morph">
+       <div class="grid xl:grid-cols-[360px_1fr] gap-5">
+        <section data-template-id="student-form-card" class="canva-card mini-card p-6 h-fit">
+         <h2 data-template-id="student-form-title" class="canva-text font-bold text-slate-800 mb-5"></h2>
+         <form id="student-form" class="space-y-4">
+          <input type="hidden" id="student-edit-id">
+          <div><label data-template-id="student-name-label" class="canva-text block text-sm font-semibold mb-1.5" for="student-name"></label><input id="student-name" required class="w-full border rounded-xl p-3" type="text">
+          </div>
+          <div><label data-template-id="gender-label" class="canva-text block text-sm font-semibold mb-1.5" for="student-gender"></label><select id="student-gender" required class="w-full border rounded-xl p-3"><option value="">Pilih</option><option>Laki-laki</option><option>Perempuan</option></select>
+          </div>
+          <div><label data-template-id="class-label" class="canva-text block text-sm font-semibold mb-1.5" for="student-class"></label><select id="student-class" required class="w-full border rounded-xl p-3 class-select"></select>
+          </div><button data-template-id="student-save-button" class="canva-button w-full rounded-xl p-3 font-bold" type="submit"></button> <button data-template-id="student-cancel-button" id="student-cancel" class="canva-button hidden w-full rounded-xl p-3 font-bold border" type="button"></button>
+         </form>
+        </section>
+        <section class="mini-card p-6 overflow-hidden">
+         <div class="flex justify-between gap-3 items-center mb-5">
+          <div>
+           <h2 data-template-id="student-list-title" class="canva-text font-bold text-slate-800"></h2>
+           <p class="text-xs text-slate-400 mt-1">Dikelompokkan berdasarkan kelas dan urutan A–Z.</p>
+          </div><input id="student-search" aria-label="Cari siswa" class="border rounded-xl px-3 py-2 w-44" placeholder="Cari nama...">
+         </div>
+         <div id="student-list" class="space-y-4 max-h-[700px] overflow-auto thin-scroll pr-1"></div>
+        </section>
+       </div>
+      </section>
+      <section id="attendance" class="view morph">
+       <div class="flex flex-wrap gap-3 items-end justify-between mb-5">
+        <div>
+         <h2 data-template-id="attendance-title" class="canva-text font-bold text-slate-800"></h2>
+         <p data-template-id="attendance-help" class="canva-text text-sm text-slate-500 mt-1"></p>
+        </div><button data-template-id="attendance-calendar-toggle" id="attendance-calendar-toggle" class="canva-button rounded-xl px-4 py-2.5 font-bold" type="button"></button>
+       </div>
+       <div class="grid lg:grid-cols-[310px_1fr] gap-5">
+        <aside id="attendance-calendar-panel" data-template-id="attendance-calendar-card" class="canva-card mini-card p-5">
+         <div id="student-calendar"></div>
+        </aside>
+        <section class="mini-card p-5 overflow-auto thin-scroll">
+         <div class="flex flex-wrap gap-3 mb-5"><select id="attendance-class" class="class-select border rounded-xl p-2.5"></select><select id="attendance-subject" class="border rounded-xl p-2.5"></select><select id="attendance-month" class="border rounded-xl p-2.5"></select><button id="attendance-load" class="rounded-xl px-4 py-2 bg-slate-800 text-white font-bold" type="button">Tampilkan</button>
+         </div>
+         <div class="flex flex-wrap gap-4 text-xs mb-4"><span><b class="text-green-600">.</b> Hadir</span><span><b class="text-yellow-600">S</b> Sakit</span><span><b class="text-blue-600">I</b> Izin</span><span><b class="text-red-600">A</b> Alpa</span>
+         </div>
+         <div id="attendance-list"></div>
+        </section>
+       </div>
+      </section>
+      <section id="grades" class="view morph">
+       <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
+        <div>
+         <h2 data-template-id="grades-title" class="canva-text font-bold text-slate-800"></h2>
+         <p data-template-id="grades-help" class="canva-text text-sm text-slate-500 mt-1"></p>
+        </div><button data-template-id="download-grades-button" id="download-grades" class="canva-button rounded-xl px-4 py-2.5 font-bold" type="button"></button>
+       </div>
+       <div class="mini-card p-5">
+        <div class="grid md:grid-cols-3 gap-3 mb-6">
+         <div><label class="text-xs font-bold">Kelas</label><select id="grade-class" class="class-select w-full border rounded-xl p-3 mt-1"></select>
+         </div>
+         <div><label class="text-xs font-bold">Siswa</label><select id="grade-student" class="w-full border rounded-xl p-3 mt-1"></select>
+         </div>
+         <div><label class="text-xs font-bold">Mata Pelajaran</label><select id="grade-subject" class="w-full border rounded-xl p-3 mt-1"></select>
+         </div>
+        </div>
+        <form id="grade-form">
+         <div class="grid sm:grid-cols-2 xl:grid-cols-5 gap-3">
+          <div><label class="text-xs font-bold" for="score-h1">Harian 1</label><input id="score-h1" min="0" max="100" type="number" class="score-input w-full border rounded-xl p-3 mt-1">
+          </div>
+          <div><label class="text-xs font-bold" for="score-h2">Harian 2</label><input id="score-h2" min="0" max="100" type="number" class="score-input w-full border rounded-xl p-3 mt-1">
+          </div>
+          <div><label class="text-xs font-bold" for="score-h3">Harian 3</label><input id="score-h3" min="0" max="100" type="number" class="score-input w-full border rounded-xl p-3 mt-1">
+          </div>
+          <div><label class="text-xs font-bold" for="score-mid">MID</label><input id="score-mid" min="0" max="100" type="number" class="score-input w-full border rounded-xl p-3 mt-1">
+          </div>
+          <div><label class="text-xs font-bold" for="score-pas">PAS</label><input id="score-pas" min="0" max="100" type="number" class="score-input w-full border rounded-xl p-3 mt-1">
+          </div>
+         </div>
+         <div class="mt-5 flex flex-wrap justify-between items-center gap-3 bg-blue-50 rounded-xl p-4"><span class="font-bold text-blue-800">Nilai Rapor: <strong id="report-score">0</strong></span><button data-template-id="grade-save-button" class="canva-button rounded-xl px-5 py-2.5 font-bold" type="submit"></button>
+         </div>
+        </form>
+       </div>
+       <section class="mini-card p-5 mt-5 overflow-auto thin-scroll">
+        <h3 data-template-id="grade-recap-title" class="canva-text font-bold text-slate-800 mb-4"></h3>
+        <div id="grade-recap"></div>
+       </section>
+      </section>
+      <section id="teacher-attendance" class="view morph">
+       <div class="flex justify-between gap-3 flex-wrap items-end mb-5">
+        <div>
+         <h2 data-template-id="teacher-attendance-title" class="canva-text font-bold"></h2>
+         <p data-template-id="teacher-attendance-help" class="canva-text text-sm text-slate-500 mt-1"></p>
+        </div><button data-template-id="teacher-calendar-toggle" id="teacher-calendar-toggle" class="canva-button rounded-xl px-4 py-2.5 font-bold" type="button"></button>
+       </div>
+       <div class="grid lg:grid-cols-[310px_1fr] gap-5">
+        <aside id="teacher-calendar-panel" data-template-id="teacher-calendar-card" class="canva-card mini-card p-5">
+         <div id="teacher-calendar"></div>
+        </aside>
+        <section class="mini-card p-6">
+         <form id="teacher-attendance-form" class="grid md:grid-cols-3 gap-4 items-end">
+          <div><label class="text-sm font-bold" for="teacher-attendance-class">Kelas</label><select id="teacher-attendance-class" class="class-select w-full border rounded-xl p-3 mt-1"></select>
+          </div>
+          <div><label class="text-sm font-bold" for="teacher-attendance-status">Status</label><select id="teacher-attendance-status" class="w-full border rounded-xl p-3 mt-1"><option value=".">. Hadir</option><option value="S">S Sakit</option><option value="I">I Izin</option><option value="A">A Alpa</option></select>
+          </div><button data-template-id="teacher-attendance-save" class="canva-button rounded-xl p-3 font-bold" type="submit"></button>
+         </form>
+         <div id="teacher-attendance-recap" class="mt-6"></div>
+        </section>
+       </div>
+      </section>
+      <section id="journal" class="view morph">
+       <div class="flex justify-between flex-wrap gap-3 items-end mb-5">
+        <div>
+         <h2 data-template-id="journal-title" class="canva-text font-bold"></h2>
+         <p data-template-id="journal-help" class="canva-text text-sm text-slate-500 mt-1"></p>
+        </div><button data-template-id="journal-calendar-toggle" id="journal-calendar-toggle" class="canva-button rounded-xl px-4 py-2.5 font-bold" type="button"></button>
+       </div>
+       <div class="grid lg:grid-cols-[310px_1fr] gap-5">
+        <aside id="journal-calendar-panel" data-template-id="journal-calendar-card" class="canva-card mini-card p-5">
+         <div id="journal-calendar"></div>
+        </aside>
+        <section class="mini-card p-6">
+         <form id="journal-form" class="grid md:grid-cols-2 gap-4">
+          <div><label class="text-sm font-bold" for="journal-date">Tanggal</label><input id="journal-date" required type="date" class="w-full border rounded-xl p-3 mt-1">
+          </div>
+          <div><label class="text-sm font-bold" for="journal-class">Kelas</label><select id="journal-class" required class="class-select w-full border rounded-xl p-3 mt-1"></select>
+          </div>
+          <div><label class="text-sm font-bold" for="journal-subject">Mata Pelajaran</label><select id="journal-subject" required class="w-full border rounded-xl p-3 mt-1"></select>
+          </div>
+          <div><label class="text-sm font-bold" for="journal-activity">Kegiatan pembelajaran</label><textarea id="journal-activity" required class="w-full border rounded-xl p-3 mt-1" rows="3"></textarea>
+          </div><button data-template-id="journal-save-button" class="canva-button rounded-xl p-3 font-bold md:col-span-2" type="submit"></button>
+         </form>
+         <div id="journal-list" class="mt-7 space-y-3"></div>
+        </section>
+       </div>
+      </section>
+      <section id="profile" class="view morph max-w-4xl">
+       <section data-template-id="profile-card" class="canva-card mini-card p-6 lg:p-8">
+        <div class="flex items-center gap-4 mb-7">
+         <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white grid place-items-center"><i data-lucide="contact-round"></i>
+         </div>
+         <div>
+          <h2 data-template-id="profile-title" class="canva-text font-bold"></h2>
+          <p data-template-id="profile-help" class="canva-text text-sm text-slate-500 mt-1"></p>
+         </div>
+        </div>
+        <form id="profile-form" class="grid md:grid-cols-2 gap-4"><input id="profile-id" type="hidden">
+         <div><label class="text-sm font-bold" for="profile-name">Nama Guru</label><input id="profile-name" class="w-full border rounded-xl p-3 mt-1" required>
+         </div>
+         <div><label class="text-sm font-bold" for="profile-ttl">Tempat, tanggal lahir</label><input id="profile-ttl" class="w-full border rounded-xl p-3 mt-1">
+         </div>
+         <div><label class="text-sm font-bold" for="profile-nip">NIP</label><input id="profile-nip" class="w-full border rounded-xl p-3 mt-1">
+         </div>
+         <div><label class="text-sm font-bold" for="profile-subject">Mata Pelajaran</label><select id="profile-subject" class="w-full border rounded-xl p-3 mt-1"></select>
+         </div>
+         <div><label class="text-sm font-bold" for="profile-contact">No. Kontak</label><input id="profile-contact" class="w-full border rounded-xl p-3 mt-1">
+         </div>
+         <div><label class="text-sm font-bold" for="profile-email">Email</label><input id="profile-email" type="email" class="w-full border rounded-xl p-3 mt-1">
+         </div>
+         <div class="md:col-span-2"><label class="text-sm font-bold" for="profile-address">Alamat Website</label><input id="profile-address" class="w-full border rounded-xl p-3 mt-1" type="url" value="https://smkyadika13.my.canva.site" placeholder="https://smkyadika13.my.canva.site">
+         </div>
+         <div class="md:col-span-2"><label class="text-sm font-bold" for="profile-motto">Motto</label><input id="profile-motto" class="w-full border rounded-xl p-3 mt-1">
+         </div><button data-template-id="profile-save-button" class="canva-button rounded-xl p-3 font-bold md:col-span-2" type="submit"></button>
+        </form>
+       </section>
+      </section>
+     </main>
+    </div>
+   </div>
+  </div>
+  <div id="toast" class="toast fixed z-50 bottom-5 right-5 max-w-sm rounded-xl bg-slate-900 text-white px-4 py-3 shadow-xl text-sm"></div>
+  <script src="/_sdk/d80b7fc77c36e544.editing_sdk.js" integrity="sha512-G1c7mLHfqSpyYPFnCMpb8X52/iP9EEJ4y/O8pmYPhWe33R+uuxRRWVYdXU2F+N4m0Y2/2lhbJGfxoPXkVhIZzw=="></script>
+  <script>
+    const classes = ["X AKL","X MPLB 1","X MPLB 2","X TKJ 1","X TKJ 2","X TKJ 3","X TKR 1","X TKR 2","X TKR 3","XI AKL","XI MPLB 1","XI MPLB 2","XI TKJ 1","XI TKJ 2","XI TKR 1","XI TKR 2","XI TKR 3","XII AKL","XII MPLB 1","XII MPLB 2","XII TKJ 1","XII TKJ 2","XII TKR 1","XII TKR 2"];
+    const subjects = [
+      ["nilai_pai","Pendidikan Agama dan Budi Pekerti"],["nilai_pkn","Pendidikan Kewarganegaraan"],["nilai_bi","Bahasa Indonesia"],["nilai_mtk","Matematika"],["nilai_ipas","Ilmu Pengetahuan Alam dan Sosial"],["nilai_seni","Seni Budaya/Musik/Tari"],["nilai_pjok","Pendidikan Jasmani Olahraga dan Kesehatan"],["nilai_inggris","Pendidikan Bahasa Inggris"],["nilai_kka","Koding dan Kecerdasan Artificial"],["nilai_mulok","Mulok"],["nilai_kik","KIK"],["nilai_dpk","Dasar Program Keahlian"],["nilai_kk","Konsentrasi Keahlian"],["nilai_jepang","Bahasa Jepang"],["nilai_mandarin","Bahasa Mandarin"],["nilai_informatika","Informatika"]
+    ];
+    const months = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    let backendRecords=[], selectedDay=new Date().getDate(), currentMonth=new Date().getMonth(), loadTimer;
+    const $=id=>document.getElementById(id);
+    const records=type=>backendRecords.filter(r=>r.type===type);
+    const toast=msg=>{ const el=$("toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),3200); };
+    const setPending=(b,on)=>{ if(!b)return;b.disabled=on;b.classList.toggle("opacity-60",on); };
+
+    function fillSelects(){
+      document.querySelectorAll(".class-select").forEach(s=>{const value=s.value;s.innerHTML='<option value="">Pilih kelas</option>'+classes.map(x=>`<option ${x===value?"selected":""}>${x}</option>`).join("");});
+      ["attendance-subject","grade-subject","journal-subject","profile-subject"].forEach(id=>$(id).innerHTML='<option value="">Pilih mata pelajaran</option>'+subjects.map(([k,n])=>`<option value="${k}">${n}</option>`).join(""));
+      $("attendance-month").innerHTML=months.map((m,i)=>`<option value="${i}" ${i===currentMonth?"selected":""}>${m} 2025/2026</option>`).join("");
+    }
+    function safeDate(y,m,d){ return new Date(y,m,d).toLocaleDateString("id-ID",{weekday:"short",day:"numeric",month:"short"}); }
+    function calendar(target, clickFn){
+      const year=currentMonth<6?2026:2025, first=new Date(year,currentMonth,1).getDay(), days=new Date(year,currentMonth+1,0).getDate();
+      let html=`<div class="flex justify-between items-center mb-4"><b>${months[currentMonth]} ${year}</b><span class="text-xs text-slate-400">Pilih tanggal</span></div><div class="grid grid-cols-7 gap-1 text-center text-[10px] text-slate-400 mb-2">${["Mg","Sn","Sl","Rb","Km","Jm","Sb"].map(x=>`<span>${x}</span>`).join("")}</div><div class="grid grid-cols-7 gap-1">`;
+      html+=Array(first).fill("<span></span>").join("");
+      for(let d=1;d<=days;d++)html+=`<button type="button" data-day="${d}" class="calendar-day ${d===selectedDay?"today":""}">${d}</button>`;
+      $(target).innerHTML=html+"</div>"; $(target).querySelectorAll("[data-day]").forEach(b=>b.onclick=()=>{selectedDay=+b.dataset.day;calendar(target,clickFn);if(clickFn)clickFn();});
+    }
+    function updateDashboard(){
+      const students=records("student"), at=records("attendance"), journals=records("journal"), profile=records("teacher_profile")[0];
+      $("stat-student-count").textContent=students.length;
+      const total=at.reduce((a,r)=>a+(r.absen_s||0)+(r.absen_i||0)+(r.absen_a||0),0), absent=at.reduce((a,r)=>a+(r.absen_s||0)+(r.absen_i||0)+(r.absen_a||0),0);
+      $("stat-attendance-rate").textContent=total?`${Math.max(0,100-Math.round(absent/Math.max(total,students.length)*100))}%`:"—";
+      $("stat-journal-count").textContent=journals.length;
+      $("stat-profile-status").textContent=profile?.guru_nama?"Siap":"Belum diisi";
+      $("teacher-summary").innerHTML=profile?`<b class="text-slate-800">${profile.guru_nama}</b><br>${profile.guru_mapel||"Mata pelajaran belum dipilih"}<br>${profile.guru_email||"Email belum diisi"}`:"Lengkapi biodata untuk menampilkan ringkasan guru.";
+      if(profile?.guru_nama){$("top-teacher-name").textContent=profile.guru_nama;$("teacher-initial").textContent=profile.guru_nama[0].toUpperCase();}
+    }
+    function renderStudents(){
+      const q=$("student-search").value.toLowerCase(), list=$("student-list"); const studentData=records("student").filter(x=>x.nama_siswa.toLowerCase().includes(q)).sort((a,b)=>a.kelas.localeCompare(b.kelas)||a.nama_siswa.localeCompare(b.nama_siswa,"id"));
+      if(!studentData.length){list.innerHTML='<p class="text-center text-slate-400 py-10">Belum ada data siswa.</p>';return;}
+      const groups={};studentData.forEach(s=>(groups[s.kelas]??=[]).push(s));
+      list.innerHTML=Object.entries(groups).map(([kelas,ss])=>`<div><h3 class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">${kelas} · ${ss.length} siswa</h3>${ss.map(s=>`<div class="flex items-center justify-between bg-slate-50 rounded-xl p-3 mb-2"><div><b>${s.nama_siswa}</b><p class="text-xs text-slate-500">${s.jenis_kelamin}</p></div><div class="flex gap-2"><button class="edit-student p-2 text-blue-600" data-id="${s.__backendId}" aria-label="Edit ${s.nama_siswa}"><i data-lucide="pencil"></i></button><button class="delete-student p-2 text-red-500" data-id="${s.__backendId}" aria-label="Hapus ${s.nama_siswa}"><i data-lucide="trash-2"></i></button></div></div>`).join("")}</div>`).join("");
+      lucide.createIcons(); document.querySelectorAll(".edit-student").forEach(b=>b.onclick=()=>editStudent(b.dataset.id)); document.querySelectorAll(".delete-student").forEach(b=>b.onclick=()=>removeRecord(b,"student",b.dataset.id));
+    }
+    function editStudent(id){const r=backendRecords.find(x=>x.__backendId===id);$("student-edit-id").value=id;$("student-name").value=r.nama_siswa;$("student-gender").value=r.jenis_kelamin;$("student-class").value=r.kelas;$("student-cancel").classList.remove("hidden");}
+    async function removeRecord(button,type,id){ if(button.dataset.confirm!=="yes"){button.dataset.confirm="yes";button.innerHTML="Hapus?";setTimeout(()=>{if(button.isConnected){button.dataset.confirm="";button.innerHTML='<i data-lucide="trash-2"></i>';lucide.createIcons();}},2500);return;} const r=backendRecords.find(x=>x.__backendId===id);setPending(button,true);try{const x=await window.dataSdk.delete(r);toast(x.isOk?"Data dihapus.":"Data tidak dapat dikonfirmasi. Segarkan data.");}finally{setPending(button,false);}}
+    function attendanceRecord(s){const subject=$("attendance-subject").value;return records("attendance").find(r=>r.nama_siswa===s.nama_siswa&&r.kelas===s.kelas&&r.absen_bulan===`${currentMonth}`&&r.absen_mapel===subject);}
+    function renderAttendance(){const cls=$("attendance-class").value;const ss=records("student").filter(s=>!cls||s.kelas===cls).sort((a,b)=>a.nama_siswa.localeCompare(b.nama_siswa));$("attendance-list").innerHTML=ss.length?ss.map(s=>{const r=attendanceRecord(s), data=r?.absen_data?JSON.parse(r.absen_data):{}, status=data[selectedDay]||".";return `<div class="flex flex-wrap gap-3 items-center justify-between border-b py-3"><div><b>${s.nama_siswa}</b><p class="text-xs text-slate-500">${s.kelas} · ${safeDate(currentMonth<6?2026:2025,currentMonth,selectedDay)}</p></div><div class="flex gap-1">${[".","S","I","A"].map(x=>`<button type="button" class="status-dot status-${x==="."?"h":x.toLowerCase()}" data-student="${s.__backendId}" data-status="${x}">${x}</button>`).join("")}<span class="ml-2 text-xs text-slate-500 self-center">S:${r?.absen_s||0} I:${r?.absen_i||0} A:${r?.absen_a||0}</span></div></div>`}).join(""):'<p class="text-slate-400 text-center py-10">Pilih kelas atau input data siswa terlebih dahulu.</p>';document.querySelectorAll("[data-student]").forEach(b=>b.onclick=()=>saveAttendance(b));}
+    async function saveAttendance(button){if(!$("attendance-subject").value){toast("Pilih mata pelajaran terlebih dahulu.");return;}const s=records("student").find(x=>x.__backendId===button.dataset.student), old=attendanceRecord(s), data=old?.absen_data?JSON.parse(old.absen_data):{};data[selectedDay]=button.dataset.status;const vals=Object.values(data), record={type:"attendance",kategori:"Absensi Siswa",nama_siswa:s.nama_siswa,jenis_kelamin:s.jenis_kelamin,kelas:s.kelas,absen_bulan:String(currentMonth),absen_mapel:$("attendance-subject").value,absen_s:vals.filter(x=>x==="S").length,absen_i:vals.filter(x=>x==="I").length,absen_a:vals.filter(x=>x==="A").length,absen_data:JSON.stringify(data)};setPending(button,true);try{const result=old?await window.dataSdk.update({...old,...record}):await window.dataSdk.create(record);if(!result.isOk)toast("Absensi belum dapat dikonfirmasi.");}finally{setPending(button,false);}}
+    function gradeStudents(){const cls=$("grade-class").value;const s=$("grade-student");s.innerHTML='<option value="">Pilih siswa</option>'+records("student").filter(x=>!cls||x.kelas===cls).sort((a,b)=>a.nama_siswa.localeCompare(b.nama_siswa)).map(x=>`<option value="${x.__backendId}">${x.nama_siswa}</option>`).join("");}
+    function report(){const v=["score-h1","score-h2","score-h3"].map(x=>+$(x).value||0), h=v.reduce((a,b)=>a+b,0)/3, n=Math.round(h*.4+(+$("score-mid").value||0)*.3+(+$("score-pas").value||0)*.3);$("report-score").textContent=n;return n;}
+    function renderGrades(){const cls=$("grade-class").value, ss=records("student").filter(x=>!cls||x.kelas===cls);$("grade-recap").innerHTML=ss.length?`<table class="w-full text-xs min-w-[900px]"><thead><tr class="bg-slate-100 text-left"><th class="p-3">Nama</th>${subjects.map(x=>`<th class="p-3">${x[1]}</th>`).join("")}</tr></thead><tbody>${ss.map(s=>{const r=records("grade").find(g=>g.nama_siswa===s.nama_siswa&&g.kelas===s.kelas)||{};return `<tr class="border-b"><td class="p-3 font-bold">${s.nama_siswa}</td>${subjects.map(([key])=>`<td class="p-3">${r[key]||"-"}</td>`).join("")}</tr>`}).join("")}</tbody></table>`:'<p class="text-slate-400 text-center py-8">Pilih kelas untuk melihat rekap nilai.</p>';}
+    function renderTeacherAttendance(){const rs=records("teacher_attendance");$("teacher-attendance-recap").innerHTML=rs.length?`<h3 class="font-bold mb-3">Rekap Absensi Guru</h3>${rs.slice().reverse().map(r=>`<div class="p-3 border-b flex justify-between"><span>${r.guru_absen_kelas||"—"}</span><b>${r.guru_absen_data||"."}</b></div>`).join("")}`:"<p class='text-slate-400'>Belum ada absensi guru tersimpan.</p>";}
+    function renderJournal(){const rs=records("journal").slice().sort((a,b)=>b.jurnal_tanggal.localeCompare(a.jurnal_tanggal));$("journal-list").innerHTML=rs.length?`<h3 class="font-bold">Jurnal tersimpan</h3>${rs.map(r=>`<article class="p-4 bg-slate-50 rounded-xl"><div class="flex justify-between gap-3"><b>${r.jurnal_kelas}</b><span class="text-xs text-slate-500">${r.jurnal_tanggal}</span></div><p class="text-sm text-blue-600 mt-1">${subjects.find(x=>x[0]===r.jurnal_mapel)?.[1]||"-"}</p><p class="text-sm mt-2">${r.jurnal_kegiatan}</p></article>`).join("")}`:"<p class='text-slate-400'>Belum ada jurnal tersimpan.</p>";}
+    function renderAll(){updateDashboard();renderStudents();renderAttendance();gradeStudents();renderGrades();renderTeacherAttendance();renderJournal();const profile=records("teacher_profile")[0];if(profile){$("profile-id").value=profile.__backendId;[["name","guru_nama"],["ttl","guru_ttl"],["nip","guru_nip"],["subject","guru_mapel"],["contact","guru_kontak"],["address","guru_alamat"],["email","guru_email"],["motto","guru_motto"]].forEach(([a,b])=>$("profile-"+a).value=profile[b]||"");}}
+    const handler={onDataChanged(data){clearTimeout(loadTimer);backendRecords=data;renderAll();const profile=records("teacher_profile")[0];if(profile?.guru_nama){$("teacher-display-name").value=profile.guru_nama;$("welcome-screen").classList.add("hidden");$("app-screen").classList.remove("hidden");}}};
+    async function initData(){loadTimer=setTimeout(()=>toast("Data belum dapat dimuat. Silakan coba lagi."),8000);const r=await window.dataSdk.init(handler);if(!r.isOk){clearTimeout(loadTimer);toast("Koneksi Canva Sheet belum tersedia.");}}
+    function nav(view){document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id===view));document.querySelectorAll(".nav-item").forEach(x=>x.classList.toggle("active",x.dataset.view===view));$("view-title").textContent=document.querySelector(`.nav-item[data-view="${view}"]`).textContent.trim();$("sidebar").classList.remove("open");}
+    document.addEventListener("DOMContentLoaded",()=>{
+      fillSelects();calendar("student-calendar",renderAttendance);calendar("teacher-calendar");calendar("journal-calendar");lucide.createIcons();initData();
+      $("welcome-form").onsubmit=async e=>{e.preventDefault();const name=$("teacher-display-name").value.trim();if(!name){$("welcome-error").textContent="Masukkan nama lengkap guru terlebih dahulu.";$("welcome-error").classList.remove("hidden");return;}const b=e.submitter,old=records("teacher_profile")[0],r={type:"teacher_profile",kategori:"Biodata Guru",guru_nama:name,guru_ttl:old?.guru_ttl||"",guru_nip:old?.guru_nip||"",guru_mapel:old?.guru_mapel||"",guru_kontak:old?.guru_kontak||"",guru_alamat:old?.guru_alamat||"https://smkyadika13.my.canva.site",guru_email:old?.guru_email||"",guru_motto:old?.guru_motto||""};setPending(b,true);try{const result=old?await window.dataSdk.update({...old,...r}):await window.dataSdk.create(r);if(!result.isOk){toast("Nama guru belum dapat disimpan.");return;}$("top-teacher-name").textContent=name;$("teacher-initial").textContent=name[0].toUpperCase();$("welcome-screen").classList.add("hidden");$("app-screen").classList.remove("hidden");}finally{setPending(b,false);}};
+      $("logout-button").onclick=()=>{$("app-screen").classList.add("hidden");$("welcome-screen").classList.remove("hidden");};
+      document.querySelectorAll("[data-view],.quick-btn").forEach(b=>b.onclick=()=>nav(b.dataset.view));$("mobile-menu").onclick=()=>$("sidebar").classList.toggle("open");
+      $("student-search").oninput=renderStudents;$("student-cancel").onclick=()=>{$("student-form").reset();$("student-edit-id").value="";$("student-cancel").classList.add("hidden");};
+      $("student-form").onsubmit=async e=>{e.preventDefault();const b=e.submitter,id=$("student-edit-id").value, r={type:"student",kategori:"Data Siswa",nama_siswa:$("student-name").value.trim(),jenis_kelamin:$("student-gender").value,kelas:$("student-class").value};setPending(b,true);try{const old=backendRecords.find(x=>x.__backendId===id),x=old?await window.dataSdk.update({...old,...r}):await window.dataSdk.create(r);if(x.isOk){toast("Data siswa tersimpan.");$("student-form").reset();$("student-edit-id").value="";$("student-cancel").classList.add("hidden");}else toast("Data belum dapat dikonfirmasi.");}finally{setPending(b,false);}};
+      $("attendance-load").onclick=()=>{currentMonth=+$("attendance-month").value;selectedDay=1;calendar("student-calendar",renderAttendance);renderAttendance();};$("attendance-calendar-toggle").onclick=()=>$("attendance-calendar-panel").classList.toggle("hidden");
+      $("grade-class").onchange=()=>{gradeStudents();renderGrades();};$("grade-student").onchange=()=>{const s=records("student").find(x=>x.__backendId===$("grade-student").value),key=$("grade-subject").value,r=s&&records("grade").find(x=>x.nama_siswa===s.nama_siswa&&x.kelas===s.kelas);$("report-score").textContent=r?.[key]||0;};document.querySelectorAll(".score-input").forEach(x=>x.oninput=report);
+      $("grade-form").onsubmit=async e=>{e.preventDefault();const b=e.submitter,s=records("student").find(x=>x.__backendId===$("grade-student").value),key=$("grade-subject").value;if(!s||!key){toast("Pilih siswa dan mata pelajaran.");return;}const old=backendRecords.find(x=>x.type==="grade"&&x.nama_siswa===s.nama_siswa&&x.kelas===s.kelas), score=report(), r={type:"grade",kategori:"Nilai Siswa",nama_siswa:s.nama_siswa,jenis_kelamin:s.jenis_kelamin,kelas:s.kelas};subjects.forEach(([subjectKey])=>{if(old&&old[subjectKey]!==undefined)r[subjectKey]=old[subjectKey];});r[key]=score;setPending(b,true);try{const x=old?await window.dataSdk.update({...old,...r}):await window.dataSdk.create(r);toast(x.isOk?"Nilai rapor tersimpan.":"Nilai belum dapat dikonfirmasi.");}finally{setPending(b,false);}};
+      $("download-grades").onclick=()=>{const rows=[["Nama Siswa","Jenis Kelamin","Kelas",...subjects.map(x=>x[1]),"Sakit","Izin","Alpa"]];records("student").forEach(s=>{const g=records("grade").find(x=>x.nama_siswa===s.nama_siswa&&x.kelas===s.kelas)||{},a=records("attendance").filter(x=>x.nama_siswa===s.nama_siswa&&x.kelas===s.kelas).reduce((z,x)=>({s:z.s+(x.absen_s||0),i:z.i+(x.absen_i||0),a:z.a+(x.absen_a||0)}),{s:0,i:0,a:0});rows.push([s.nama_siswa,s.jenis_kelamin,s.kelas,...subjects.map(([k])=>g[k]||""),a.s,a.i,a.a]);});const blob=new Blob([rows.map(r=>r.map(v=>`"${String(v).replaceAll('"','""')}"`).join(",")).join("\n")],{type:"text/csv"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="rekap-siaga-guru.csv";a.click();URL.revokeObjectURL(url);};
+      $("teacher-calendar-toggle").onclick=()=>$("teacher-calendar-panel").classList.toggle("hidden");$("teacher-attendance-form").onsubmit=async e=>{e.preventDefault();const b=e.submitter,r={type:"teacher_attendance",kategori:"Absensi Guru",guru_absen_kelas:$("teacher-attendance-class").value,guru_absen_data:`${safeDate(currentMonth<6?2026:2025,currentMonth,selectedDay)} · ${$("teacher-attendance-status").value}`};setPending(b,true);try{const x=await window.dataSdk.create(r);toast(x.isOk?"Absensi guru tersimpan.":"Absensi belum dapat dikonfirmasi.");}finally{setPending(b,false);}};
+      $("journal-calendar-toggle").onclick=()=>$("journal-calendar-panel").classList.toggle("hidden");$("journal-form").onsubmit=async e=>{e.preventDefault();const b=e.submitter,r={type:"journal",kategori:"Jurnal Guru",jurnal_tanggal:$("journal-date").value,jurnal_kelas:$("journal-class").value,jurnal_mapel:$("journal-subject").value,jurnal_kegiatan:$("journal-activity").value.trim()};setPending(b,true);try{const x=await window.dataSdk.create(r);if(x.isOk){toast("Jurnal tersimpan.");$("journal-form").reset();}else toast("Jurnal belum dapat dikonfirmasi.");}finally{setPending(b,false);}};
+      $("profile-form").onsubmit=async e=>{e.preventDefault();const b=e.submitter,id=$("profile-id").value,r={type:"teacher_profile",kategori:"Biodata Guru",guru_nama:$("profile-name").value.trim(),guru_ttl:$("profile-ttl").value,guru_nip:$("profile-nip").value,guru_mapel:$("profile-subject").value,guru_kontak:$("profile-contact").value,guru_alamat:$("profile-address").value || "https://smkyadika13.my.canva.site",guru_email:$("profile-email").value,guru_motto:$("profile-motto").value};setPending(b,true);try{const old=backendRecords.find(x=>x.__backendId===id),x=old?await window.dataSdk.update({...old,...r}):await window.dataSdk.create(r);toast(x.isOk?"Biodata guru tersimpan.":"Biodata belum dapat dikonfirmasi.");}finally{setPending(b,false);}};
+    });
+  </script>
+ </body>
+</html>
